@@ -29,7 +29,7 @@ jobs:
     permissions:
       id-token: write # required for obtaining the OIDC JWT from Github
     steps:
-      - uses: dopplerhq/secrets-fetch-action@v1.3.0
+      - uses: dopplerhq/secrets-fetch-action@v2.0.0
           id: doppler
           with:
             auth-method: oidc        
@@ -43,7 +43,7 @@ jobs:
  The `doppler-project` and `doppler-config` inputs must be provided when using a Service Account Token:
 
 ```yaml
-- uses: dopplerhq/secrets-fetch-action@v1.3.0
+- uses: dopplerhq/secrets-fetch-action@v2.0.0
       id: doppler
       with:
         doppler-token: ${{ secrets.DOPPLER_TOKEN }}
@@ -60,7 +60,7 @@ Create a GitHub repository secret named `DOPPLER_TOKEN` or if using multiple Ser
 Then supply the Service Token using the `doppler-token` input:
 
 ```yaml
-- uses: dopplerhq/secrets-fetch-action@v1.3.0
+- uses: dopplerhq/secrets-fetch-action@v2.0.0
       id: doppler
       with:
         doppler-token: ${{ secrets.DOPPLER_TOKEN }}
@@ -86,7 +86,7 @@ jobs:
   secrets-fetch:
     runs-on: ubuntu-latest
     steps:
-    - uses: dopplerhq/secrets-fetch-action@v1.3.0
+    - uses: dopplerhq/secrets-fetch-action@v2.0.0
       id: doppler
       with:
         doppler-token: ${{ secrets.DOPPLER_TOKEN }}
@@ -109,7 +109,7 @@ jobs:
   secrets-fetch:
     runs-on: ubuntu-latest
     steps:
-    - uses: dopplerhq/secrets-fetch-action@v1.3.0
+    - uses: dopplerhq/secrets-fetch-action@v2.0.0
       id: doppler
       with:
         doppler-token: ${{ secrets.DOPPLER_TOKEN }}

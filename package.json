@@ -14,7 +14,8 @@
     },
     "type": "module",
     "scripts": {
-        "test": "node index.js"
+        "test": "node --test doppler.test.js",
+        "test:watch": "node --test --watch doppler.test.js"
     },
     "keywords": [],
     "homepage": "https://github.com/dopplerhq/secrets-fetch-action/#readme",
